@@ -6,28 +6,42 @@ Problem: Many adults struggle with basic PC use due to lack of simple, local-lan
 Solution: A simple, step-by-step PC learning website in Rajasthani, with visuals and a voice assistant, helping beginners learn keyboard, Word, Excel, and tasks easily.
 
 Architecture:
-          ┌────────────────────────┐
-          │     User Browser       │
-          │(HTML, CSS, JS, i18n)   │
-          └──────────┬─────────────┘
-                     │
-                     ▼
-          ┌────────────────────────┐
-          │     Flask Backend      │
-          │ (Python REST Server)   │
-          ├────────────────────────┤
-          │ Serves pages & locales │
-          │ Handles voice queries  │
-          │ Stores progress data   │
-          └──────────┬─────────────┘
-                     │
-         ┌───────────┴───────────┐
-         ▼                       ▼
-┌──────────────────────┐  ┌──────────────────────┐
-│ MySQL Database        │  │ Gemini Voice API     │
-│ (Users, lessons,      │  │ (Voice/text help,    │
-│ progress, locales)    │  │ translations)        │
-└──────────────────────┘  └──────────────────────┘
+pc-guide-starter/
+├── .github/
+│   └── workflows/ci.yml                # optional: run tests on push (local style)
+├── .gitignore
+├── README.md
+├── LICENSE
+├── requirements.txt
+├── setup.sh                            # helper script for local setup (Linux/mac)
+├── run_windows.bat                     # helper script for Windows
+├── .env.example
+├── app.py
+├── config.py
+├── schema.sql
+├── seed.sql
+├── migrations/                          # optional lightweight migration files
+├── locales/
+│   ├── en.json
+│   └── rj.json
+├── templates/
+│   ├── base.html
+│   └── index.html
+├── static/
+│   ├── css/styles.css
+│   ├── js/i18n.js
+│   ├── js/main.js
+│   └── js/voice.js
+│   └── assets/icons/
+├── sample_content/
+│   └── lessons.json
+├── tests/
+│   ├── test_basic.py
+│   └── conftest.py
+└── docs/
+    ├── architecture.md
+    ├── dev-guide.md
+    └── localization-guide.md
 
 Tech Stack with Justification:
 
