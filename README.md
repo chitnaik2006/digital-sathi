@@ -9,7 +9,7 @@ Tech Stack with Justification:
 
 | Layer                    | Technology                        | Purpose                            | Justification                                                                                    |
 | ------------------------ | --------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------ |
-| Frontend**               | HTML, CSS, JavaScript             | User Interface                     | Simple, fast, and widely supported. Great for multilingual support (Rajasthani, Hindi, English). |
+| Frontend               | HTML, CSS, JavaScript             | User Interface                     | Simple, fast, and widely supported. Great for multilingual support (Rajasthani, Hindi, English). |
 | Framework (optional)     | React.js (optional upgrade)       | Dynamic UI                         | For better scalability and smoother voice assistant integration.                                 |
 | Backend                  | Python (Flask or Django)          | Server Logic & API handling        | Easy to integrate AI (Gemini API), process requests, and manage lessons.                         |
 | Database                 | MySQL                             | Store user data, lessons, progress | Reliable, structured, open-source relational DB ideal for educational data.                      |
